@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.hero,
+.second-image {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero {
+    background-image: url("F16.jpg");
+    background-attachment: fixed;
+}
+
+.second-image {
+    background-image: url("F22Raptor.jpg");
+}
+
+.hero::before,
+.second-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.content,
+.second-content {
+    position: relative;
+    z-index: 1;
+    width: min(700px, 100%);
+    padding: 32px;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+a {
+    color: #8fd3ff;
+}
